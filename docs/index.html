@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>השחיה שלי - אביתר</title>
+<meta name="theme-color" content="#0ea5e9">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏊</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- מסך נעילה -->
+<section id="lock" class="lock" hidden>
+  <div class="lock-card">
+    <div class="lock-icon">🏊</div>
+    <h1>השחיה שלי - אביתר</h1>
+    <p>הנתונים שלך מוצפנים. הקלד את סיסמת הדשבורד כדי לפתוח.</p>
+    <form id="lockForm">
+      <input id="lockPass" type="password" autocomplete="current-password" placeholder="סיסמת הדשבורד" required>
+      <label class="check"><input id="lockRemember" type="checkbox" checked> לזכור במכשיר הזה</label>
+      <button class="btn primary" type="submit">פתיחה</button>
+      <p id="lockErr" class="err" hidden>הסיסמה לא נכונה, נסה שוב.</p>
+    </form>
+  </div>
+</section>
+
+<div id="app" hidden>
+  <header class="top">
+    <div class="brand"><span class="logo">🏊</span><div><h1>השחיה שלי - אביתר</h1><small id="updated">-</small></div></div>
+    <div class="top-actions">
+      <button id="refreshBtn" class="btn primary"><span class="ico">⟳</span> <span class="lbl">משוך שחיה חדשה</span></button>
+      <button id="settingsBtn" class="btn icon" aria-label="הגדרות">⚙</button>
+    </div>
+  </header>
+  <div id="banner" class="banner" hidden></div>
+
+  <main>
+    <!-- השחיה הנבחרת -->
+    <section class="card hero" id="hero"></section>
+
+    <section class="grid2">
+      <div class="card coach" id="coachCard"></div>
+      <div class="card" id="goalsCard"></div>
+    </section>
+
+    <section class="card" id="setsCard"></section>
+
+    <section class="grid2">
+      <div class="card" id="insightsCard"></div>
+      <div class="card" id="heartCard"></div>
+    </section>
+
+    <section class="card" id="trendsCard">
+      <div class="card-head"><div><h2>מגמות לאורך זמן</h2><p class="muted">כל נקודה היא שחיה אחת: השמאלית היא הראשונה והימנית האחרונה. הנקודה הגדולה היא השחיה שנבחרה למעלה, והקו המקווקו הוא הממוצע. לחיצה על נקודה פותחת את השחיה.</p></div></div>
+      <div class="trends" id="trends"></div>
+    </section>
+
+    <section class="grid2">
+      <div class="card" id="healthCard"></div>
+      <div class="card" id="bloodCard"></div>
+    </section>
+
+    <section class="card" id="historyCard"></section>
+
+    <section class="card" id="cheatCard"></section>
+  </main>
+</div>
+
+<!-- הגדרות -->
+<dialog id="settings">
+  <form method="dialog" class="dlg">
+    <h2>הגדרות</h2>
+    <label>מספר בריכות בכל סט (השגרה שלך)
+      <input id="setLengths" type="number" min="1" max="100" value="10">
+    </label>
+    <label>אורך הבריכה (מטר) - רק אם השעון לא שלח
+      <input id="setPool" type="number" min="10" max="100" value="20">
+    </label>
+    <fieldset>
+      <legend>חיבור ל-GitHub (בשביל כפתור המשיכה ושמירת תיקונים)</legend>
+      <label>ריפו (owner/name)
+        <input id="setRepo" type="text" dir="ltr" placeholder="owner/swim-dashboard">
+      </label>
+      <label>טוקן אישי (Fine-grained token)
+        <input id="setToken" type="password" dir="ltr" placeholder="github_pat_...">
+      </label>
+      <p class="muted small">הטוקן נשמר רק בדפדפן הזה. הרשאות נדרשות לריפו הזה בלבד: Actions - Read and write, Contents - Read and write.</p>
+    </fieldset>
+    <div class="dlg-actions">
+      <button class="btn primary" value="save" id="saveSettings">שמירה</button>
+      <button class="btn" value="cancel">ביטול</button>
+      <button class="btn danger" value="logout" id="logoutBtn" type="button">נעילה והתנתקות</button>
+    </div>
+  </form>
+</dialog>
+
+<div id="toast" class="toast" hidden></div>
+<div id="tip" class="tip" hidden></div>
+<script src="demo.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+{
+ "hrZones": [
+  {
+   "secsInZone": "float",
+   "zoneLowBoundary": "int",
+   "zoneNumber": "int"
+  },
+  "x5"
+ ],
+ "laps": [
+  {
+   "averageHR": "float",
+   "averageMovingSpeed": "float",
+   "averageSWOLF": "float",
+   "averageSpeed": "float",
+   "averageStrokeDistance": "float",
+   "averageStrokes": "float",
+   "averageSwimCadence": "float",
+   "bmrCalories": "float",
+   "calories": "float",
+   "distance": "float",
+   "duration": "float",
+   "elapsedDuration": "float",
+   "lapIndex": "int",
+   "lengthDTOs": [
+    {
+     "averageHR": "float",
+     "averageSWOLF": "float",
+     "averageSpeed": "float",
+     "calories": "float",
+     "distance": "float",
+     "duration": "float",
+     "lengthIndex": "int",
+     "maxHR": "float",
+     "maxSpeed": "float",
+     "startTimeGMT": "str",
+     "swimStroke": "str",
+     "totalNumberOfStrokes": "int"
+    },
+    "x10"
+   ],
+   "maxHR": "float",
+   "maxSpeed": "float",
+   "messageIndex": "int",
+   "movingDuration": "float",
+   "numberOfActiveLengths": "int",
+   "startTimeGMT": "str",
+   "swimStroke": "str",
+   "totalNumberOfStrokes": "int"
+  },
+  "x11"
+ ],
+ "summary": {
+  "activeLengths": "int",
+  "activityId": "int",
+  "activityName": "str",
+  "averageHR": "float",
+  "averageSwimCadenceInStrokesPerMinute": "float",
+  "averageSwolf": "float",
+  "avgStrokeDistance": "float",
+  "avgStrokes": "float",
+  "bmrCalories": "float",
+  "calories": "float",
+  "deviceId": "int",
+  "distance": "float",
+  "duration": "float",
+  "elapsedDuration": "float",
+  "hrTimeInZone_1": "float",
+  "hrTimeInZone_2": "float",
+  "hrTimeInZone_3": "float",
+  "hrTimeInZone_4": "float",
+  "hrTimeInZone_5": "float",
+  "manufacturer": "str",
+  "maxHR": "float",
+  "movingDuration": "float",
+  "poolLength": "float",
+  "startTimeGMT": "str",
+  "startTimeLocal": "str",
+  "strokes": "float",
+  "type": "str",
+  "unitOfPoolLength": {
+   "factor": "float",
+   "unitId": "int",
+   "unitKey": "str"
+  }
+ }
+}
