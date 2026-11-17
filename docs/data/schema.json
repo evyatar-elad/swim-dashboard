@@ -48,7 +48,7 @@
    "swimStroke": "str",
    "totalNumberOfStrokes": "int"
   },
-  "x11"
+  "x10"
  ],
  "summary": {
   "activeLengths": "int",
